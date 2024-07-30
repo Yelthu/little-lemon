@@ -1,9 +1,12 @@
+import '../App.css';
+import Logo from '../icons_assets/Logo.svg';
+
 const NavBar = () => {
     return (
         <>
-            <nav>
-                <img src="./icon_assets/Logo.svg" alt="logo"></img>
-                <ul>
+            <nav className="nav">
+                <img src={Logo} alt="logo" className="logo" />
+                <ul className="menu">
                     <li><a href="/home">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/reservations">Reservations</a></li>
