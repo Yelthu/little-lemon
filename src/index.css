@@ -287,7 +287,7 @@ code {
 
 /* About */
 .about {
-  background-color: #EDEFEE;
+  /* background-color: #EDEFEE; */
   grid-column: 1/ span 12;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
