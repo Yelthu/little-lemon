@@ -1,38 +1,590 @@
-.App {
-  text-align: center;
+body {
+  width: 100%;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  z-index: 10001;
+}
+
+
+.navbar {
+  padding: 10px 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 1em;
+}
+
+nav ul li a {
+  color: #000;
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+}
+
+nav ul li a:hover {
+  text-decoration: 4px underline solid #F4CE14;
+  color: #494E57;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links.visible {
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 100%;
+  background-color: #495E57;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* header section */
+
+.header {
+  background-color: #495e57;
+  padding: 40px 0;
+}
+
+.header section {
+  color: #EDEFEE;
+  padding: 10px 13%;
+  position: relative;
+}
+
+
+h2 {
+  color: #F4CE14;
+  font-size: 2.7rem;
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 2.3rem;
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+}
+
+.banner p {
+  font-size: 20px;
+  max-width: 520px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-family: 'Karla', sans-serif;
+}
+
+button {
+  background-color: #F4CE14;
+  color: black;
+  padding: 14px 18px;
+  border: none;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+}
+
+.banner button:hover {
+  background-color: #495E57;
+  outline: 1px solid #F4CE14;
+  color: #FFF;
+}
+
+button:hover {
+  background-color: #495e57;
+  color: #FFF;
+}
+
+.banner-img {
+  position: absolute;
+  right: 13%;
+  top: 15%;
+  width: 400px;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form,
+.comfirm {
+  padding: 10px 13%;
+}
+
+.formField {
+  padding: 50px 20px;
+  border: #495E57;
+}
+
+.formField h1 {
+  font-size: 2.7rem;
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+}
+
+
+.formField h4 {
+  color: coral;
+  font-family: 'Karla', sans-serif;
+}
+
+.formField p {
+  font-size: 20px;
+  max-width: 520px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-family: 'Karla', sans-serif;
+}
+
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  height: 20px;
+}
+
+#book-date,
+#book-time,
+#book-guests,
+#book-occasion {
+  background: #bdbdbd43;
+  padding: 8px 24px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 50%;
+}
+
+button .btnReceive {
+  padding: 12px 16px;
+  margin-top: 40px;
+  background: #495e57;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+}
+
+button .btnReceive:hover {
+  background-color: #F4CE14;
+  color: #000;
+}
+
+.comfirm span {
+  color: green;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmed-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* menu items */
+
+.menu-container {
+  margin: 110px auto;
+  padding: 10px 13%;
+}
+
+.menu-container h2 {
+  color: #000;
+  font-family: 'Markazi Text', serif;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+}
+
+.menu-items {
+  width: 350px;
+  background: #EDEFEE;
+  border-radius: 8px;
+}
+
+.menu-container img {
+  width: 100%;
+  height: 233px;
+  border-radius: 8px;
+}
+
+.menu-content {
+  padding: 5px 15px;
+}
+
+
+.menu-content .heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-content .heading h5 {
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+}
+
+.menu-content .heading p {
+  color: #EE9972;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.menu-content .description {
+  font-family: 'Karla', sans-serif;
+}
+
+.orderbtn {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 0px;
+}
+
+/* Testominals */
+
+.testomonials-container {
+  margin: 110px auto;
+  padding: 10px 5%;
+  max-width: 1200px;
+  /* Set a max-width to prevent it from getting too wide on large screens */
+}
+
+.testomonials-container h2 {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: #000;
+  font-family: 'Markazi Text', serif;
 }
 
-.App-link {
-  color: #61dafb;
+.testomonials-cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.testomonials-items {
+  width: 100%;
+  /* Default to full width on smaller screens */
+  max-width: 350px;
+  /* Limit the width on larger screens */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.testomonials-container img {
+  width: 100%;
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.testomonials-container-img {
+  display: flex;
+  justify-content: center;
+}
+
+.testomonials-items p {
+  font-size: 16px;
+  max-width: 100%;
+  /* Ensure the text doesn't overflow */
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-family: 'Karla', sans-serif;
+}
+
+/* about section */
+
+.about {
+  padding: 40px 0;
+}
+
+.about section {
+  color: #EDEFEE;
+  padding: 10px 13%;
+  position: relative;
+  display: flex;
+  column-gap: 20%;
+}
+
+.chicago h2 {
+  color: #F4CE14;
+  font-size: 2.7rem;
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+}
+
+.chicago h3 {
+  font-size: 1.5rem;
+  font-family: 'Markazi Text', serif;
+  font-weight: 300;
+  color: #000;
+}
+
+.chicago p {
+  font-size: 20px;
+  max-width: 520px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-family: 'Karla', sans-serif;
+  color: #000;
+}
+
+.about-image-container {
+  display: flex;
+}
+
+.about-image-container img {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.image1 {
+  top: 25%;
+  right: 20%;
+}
+
+.image2 {
+  top: 35%;
+  right: 25%;
+}
+
+footer section {
+  padding: 10px 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.company-info img {
+  margin-top: 12px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.company-info p {
+  width: 320px;
+  font-family: 'Karla', sans-serif;
+}
+
+footer h3 {
+  font-size: 1.7rem;
+  font-family: 'Markazi Text', serif;
+  color: #495E57;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer ul li {
+  padding: 8px 0;
+}
+
+footer ul li a {
+  color: #494E57;
+  font-family: 'Karla', sans-serif;
+}
+
+footer ul li a:hover {
+  color: #494E57;
+  text-decoration: underline solid #F4CE14;
+}
+
+.center {
+  text-align: center;
+}
+
+input {
+  padding: 5px;
+  color: #333;
+}
+
+input:focus {
+  outline: 1px solid #F4CE14;
+}
+
+label {
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+  color: #494E57;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links {
+    display: none;
   }
+
+  .nav-links.visible {
+    display: flex;
+    background: #333333;
+    z-index: 1000;
+    padding: 20px 0;
+  }
+
+  .navbar {
+    background: #fff;
+    padding: 10px 8%;
+  }
+
+  nav ul li a {
+    color: #fff;
+  }
+
+  .bar {
+    background: #333333;
+  }
+
+  .banner-img {
+    display: none;
+  }
+
+  form,
+  .comfirm {
+    padding: 10px 8%;
+  }
+
+
+  .header section,
+  .menu-container {
+    padding: 10px 8%;
+  }
+
+  .menu-container {
+    margin: 20px 0;
+  }
+
+  .menu-header {
+    justify-content: flex-start;
+  }
+
+  .menu-items {
+    width: 100%;
+  }
+
+  .testomonials-container {
+    padding: 10px 3%;
+    /* Reduce padding on smaller screens */
+  }
+
+  .testomonials-items {
+    width: 100%;
+    /* Ensure items are full width on smaller screens */
+  }
+
+  .testomonials-cards {
+    flex-direction: column;
+    /* Stack items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .testomonials-items p {
+    font-size: 18px;
+    /* Slightly smaller font on smaller screens */
+  }
+
+  footer section {
+    padding: 10px 8%;
+    flex-direction: column;
+  }
+
+  .company-info p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .testomonials-items p {
+    font-size: 10px;
+    /* Even smaller font on very small screens */
+  }
+}
+
+.hidden {
+  display: none;
 }
